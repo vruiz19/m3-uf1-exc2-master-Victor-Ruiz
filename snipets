@@ -1,0 +1,84 @@
+	String intToBinaryWithSeparator(int n, String separator) {
+		String str = String.format("%032d", new java.math.BigInteger(Integer.toBinaryString(n)));
+
+		String[] as = str.split("(?<=\\G........)");
+
+		java.util.stream.Stream<String> streamIn = java.util.Arrays.stream(as);
+
+		java.util.stream.Stream<String> streamOut = streamIn.map(s -> {
+			java.lang.StringBuilder sb = new java.lang.StringBuilder(s);
+			sb.insert(4, '_');
+			return sb.toString();
+		});
+
+		return streamOut.collect(java.util.stream.Collectors.joining(separator));
+	}
+	String intToBin(int n) {
+		return intToBinaryWithSeparator(n, " , ");
+	}
+isPrime(5)
+isPrime(-5)
+boolean isPrime(int n) {
+		boolean primo = true;
+		int contador = 2;
+		if(n<=1){
+			primo=false;
+		}	
+		else {
+			while ((primo) && (contador!=n)){
+				if (n % contador == 0)
+					primo = false;
+				contador++;
+			}
+		}
+		return primo;
+	}
+isPrime(2)
+isPrime(5)
+void findPrimes(int a, int b) {
+		while(a<=b) {
+			if(isPrime(a))
+				println(a);
+			a++;
+		}
+	}
+findPrimes(2,5)
+findPrimes(20,5)
+findPrimes(4,5)
+int gcd(int n, int m){
+	    while(m != 0){
+	         int t = m;
+	         m = n % m;
+	         n = t;
+	    }
+	    return n;
+	}
+gcd(5,2)
+gcd(-5,2)
+gcd(10,20)
+gcd(40,20)
+int factorial(int n){
+		if(n<0)
+			return -1;
+	    if(n==0)
+	        return 1;
+	    else
+	    	return n * factorial(n-1);
+	}
+factorial(-9)
+factorial(3)
+void printChars(int a, int ... b){
+	for(int i:b){
+		if(i >= 65 && i <= 90){
+			println((char)(i));
+		} else {
+			println("Error: numero fora de rang.");
+		}	
+	}
+}
+printChars(99)
+printChars(90)
+printChars(89)
+printChars(89,77)
+printChars(1,4)
+printChars(1,4)

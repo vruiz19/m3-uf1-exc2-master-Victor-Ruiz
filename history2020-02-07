@@ -1,0 +1,91 @@
+void isPrime(int n) {
+		boolean primo = true;
+		int contador = 2;
+		if(n<=1){
+			primo=false;
+		}	
+		else {
+			while ((primo) && (contador!=n)){
+				if (n % contador == 0)
+					primo = false;
+				contador++;
+			}
+		}
+		println(primo);
+	}
+isPrime(5)
+isPrime(-5)
+boolean isPrime(int n) {
+		boolean primo = true;
+		int contador = 2;
+		if(n<=1){
+			primo=false;
+		}	
+		else {
+			while ((primo) && (contador!=n)){
+				if (n % contador == 0)
+					primo = false;
+				contador++;
+			}
+		}
+		return primo;
+	}
+isPrime(20,5)
+isPrime(2,5)
+isPrime(2)
+isPrime(5)
+void findPrimes(int a, int b) {
+		while(a<=b) {
+			if(isPrime(a))
+				println(a);
+			a++;
+		}
+	}
+findPrime(20,5)
+findPrime(2,5)
+findPrimes(2,5)
+findPrimes(20,5)
+findPrimes(4,5)
+int gcd(int n, int m){
+	    while(m != 0){
+	         int t = m;
+	         m = n % m;
+	         n = t;
+	    }
+	    return n;
+	}
+gcd(5)
+gcd(5,2)
+gcd(-5,2)
+gcd(10,20)
+gcd(40,20)
+int factorial(int n){
+		if(n<0)
+			return -1;
+	    if(n==0)
+	        return 1;
+	    else
+	    	return n * factorial(n-1);
+	}
+factorial(-9)
+factorial(3)
+void printChars(int a, int ... b){
+	for(int i:b){
+		if(i >= 65 && i <= 90){
+			println((char)(i));
+		} else {
+			println("Error: numero fora de rang.");
+		}	
+	}
+}
+printChars(99)
+printChars(90)
+printChars(89)
+printChars(89,77)
+printChars(1,4)
+printChars(1000000000,444444444444)
+printChars(1,4)
+/save snipets
+/history --save history2020-02-07
+/history -save history2020-02-07
+/save --history history2020-02-07
